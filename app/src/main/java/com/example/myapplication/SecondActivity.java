@@ -29,6 +29,5 @@ public class SecondActivity extends AppCompatActivity {
         CourseNameTextView.setText(courseName);
         departmentNameTextView.setText(departmentName);
 
-        // HOPEFULLY it runs now fingers crossed
     }
 }
