@@ -28,7 +28,7 @@ public class SecondActivity extends AppCompatActivity {
         Course newCourse = new Course(courseName, departmentName);
 
         // pass the newCourse class created data into the textviews for displaying
-        CourseNameTextView.setText(newCourse.getName());
-        departmentNameTextView.setText(newCourse.department);
+        CourseNameTextView.setText("Course: " + newCourse.getName());
+        departmentNameTextView.setText("Department: " + newCourse.department);
     }
 }
