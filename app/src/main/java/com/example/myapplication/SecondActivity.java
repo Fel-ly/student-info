@@ -11,7 +11,6 @@ public class SecondActivity extends AppCompatActivity {
 
     private TextView CourseNameTextView;
     private TextView departmentNameTextView;
-    private Course newCourse = new Course("hospitality", "tourism and hospitality");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +24,11 @@ public class SecondActivity extends AppCompatActivity {
         String courseName = getIntent().getStringExtra("courseName");
         String departmentName = getIntent().getStringExtra("departmentName");
 
-        // once we get it now we pass it into the text views for displaying
-        CourseNameTextView.setText(courseName);
-        departmentNameTextView.setText(departmentName);
+        //passing the data into the course object
+        Course newCourse = new Course(courseName, departmentName);
 
+        // pass the newCourse class created data into the textviews for displaying
+        CourseNameTextView.setText(newCourse.getName());
+        departmentNameTextView.setText(newCourse.department);
     }
 }
